@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Order Form</title>
+    <link rel="stylesheet" href="/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        window.onload = function() {
+            function handleSubmit(event) {
+                event.preventDefault();
+
+                var data = {};
+                let validated = true;
+                $("#form input[type=text]").each(function() {
+                    if (!$(this).val()) {
+                        validated = false;
+                        alert("Please make sure all fields are filled out.");
+                        return false;
+                    }
+                    data[$(this).attr("id")] = $(this).val();
+                });
+
+                if (validated == false)
+                    return;
+
+                $.ajax({
+                    url:"/customers",
+                    type: 'post',
+                    data: JSON.stringify(data),
+                    contentType: 'application/json',
+                    dataType:'json',
+                    success: function(r) {
+                        window.location = "confirm.html?id="+r.id
+                    },
+                    error: function(err) {
+                        console.log(err.responseText)
+                    }
+                });
+            }
+
+            $("#submit-form").click(handleSubmit)
+        };
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="glove">
+        <h1>Order Form</h1>
+        
+        <form id="form" action="/customers" method="post">
+            <fieldset>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </fieldset>
+            <fieldset>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </fieldset>
+            <fieldset>
+                <label for="grade">Grade:</label>
+                <input type="text" id="grade" name="grade" required>
+            </fieldset>
+            <fieldset>
+                <label for="address1">Address1:</label>
+                <input type="text" id="address1" name="address1" required>
+            </fieldset>
+            <fieldset>
+                <label for="address2">Address2:</label>
+                <input type="text" id="address2" name="address2" required>
+            </fieldset>
+            <fieldset>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </fieldset>
+            <fieldset>
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+            </fieldset>
+            <fieldset>
+                <label for="postal">Postal:</label>
+                <input type="text" id="postal" name="postal" required>
+            </fieldset>
+
+            <button type="button" id="submit-form">Submit</button>
+        </form>
+    </div>
+    
+    <script src="built/bundle.js"></script>
+</body>
+</html>

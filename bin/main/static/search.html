@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Order Search</title>
+    <link rel="stylesheet" href="/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        window.onload = function() {
+            function handleSubmit(event) {
+                event.preventDefault();
+
+                $.ajax({
+                    url:"/customer",
+                    type: 'get',
+                    data: {"id":$("#id").val(), "lastName":$("#lastName").val()},
+                    success: function(r) {
+                        if (r) {
+                            $("#form-results tbody").html(
+                                $('<tr>').append([
+                                    $('<td>').text(r.firstName),
+                                    $('<td>').text(r.lastName),
+                                    $('<td>').text(r.grade),
+                                    $('<td>').text(r.address1),
+                                    $('<td>').text(r.address2),
+                                    $('<td>').text(r.city),
+                                    $('<td>').text(r.state),
+                                    $('<td>').text(r.postal)
+                                ])
+                            );
+                            $("#form-results").show();
+                        } else {
+                            alert("Sorry, there are no orders with that registered ID and name.")
+                            $("#form-results").hide();
+                        }
+                    },
+                    error: function(err) {
+                        $("#form-results").hide();
+                        alert(err.responseText);
+                    }
+                });
+            }
+
+            $("#submit-form").click(handleSubmit)
+        };
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="glove">
+        <h1>Search</h1>
+        
+        <form id="form">
+            <fieldset>
+                <label>ID</label>
+                <input type="text" id="id" name="id">
+            </fieldset>
+            <fieldset>
+                <label>Last Name</label>
+                <input type="text" id="lastName" name="lastName">
+            </fieldset>
+
+            <button id="submit-form" type="submit">Submit</button>
+        </form>
+
+        <table id="form-results">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Grade</th>
+                    <th>Address 1</th>
+                    <th>Address 2</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Postal</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="built/bundle.js"></script>
+</body>
+</html>

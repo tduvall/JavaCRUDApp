@@ -1,0 +1,9 @@
+body { background-color: lightgray; margin:auto; }
+#glove { max-width:800px; margin:20px auto; padding:6px; background-color:white; border:1px solid black; border-radius:6px; text-align:center; }
+#form-results { display:none; border:1px solid black; width:100%; }
+
+.link-button { display:inline-block; background-color:gray; color:white; padding:6px; border:1px solid black; border-radius:6px; transition:0.2s; }
+.link-button:hover { background-color:lightgray; color:black; }
+
+fieldset { border:0; display:flex; flex-wrap:wrap; }
+fieldset label, fieldset input { flex-grow:1; }

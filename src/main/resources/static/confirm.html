@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(function() {
+            let orderid = new URL(window.location.href).searchParams.get('id');
+            
+            $.ajax({
+                url:"/confirmCustomer",
+                type: 'get',
+                data: {"id":orderid},
+                success: function(r) {
+                    $("#form-results tbody").html(
+                        $('<tr>').append([
+                            $('<td>').text(r.firstName),
+                            $('<td>').text(r.lastName),
+                            $('<td>').text(r.grade),
+                            $('<td>').text(r.address1),
+                            $('<td>').text(r.address2),
+                            $('<td>').text(r.city),
+                            $('<td>').text(r.state),
+                            $('<td>').text(r.postal)
+                        ])
+                    );
+                    $("#orderid").text(orderid);
+                    $("#form-results").show();
+                },
+                error: function(err) {
+                    $("#form-results").hide();
+                    alert("Sorry, no users with that id/name combination exist!");
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="glove">
+        <h1>Order Successful</h1>
+
+        <p>Thank you for placing an order! Your order number is <span id="orderid"></span>.</p>
+
+        <table id="form-results">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Grade</th>
+                    <th>Address 1</th>
+                    <th>Address 2</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Postal</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="built/bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module build failed (from ./node_modules/babel-loader/lib/index.js):
+  SyntaxError: C:\Users\Taylor\Desktop\demo-1\index.html: Missing semicolon. (1:86)
+  
+  > 1 | <head><script defer src="./src/main/resources/static/built/bundle.js"></  script><script defer src="./src/main/resources/static/built/bundle.js"></script></head>Html Webpack Plugin:
+      |                                                                                       ^
+    2 | <pre>
+    3 |   Error: Child compilation failed:
+    4 |   Module build failed (from ./node_modules/babel-loader/lib/index.js):
+      at instantiate (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:64:32)
+      at constructor (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:364:12)
+      at JSXParserMixin.raise (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:3253:19)
+      at JSXParserMixin.semicolon (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:3624:10)
+      at JSXParserMixin.parseExpressionStatement (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:13089:10)
+      at JSXParserMixin.parseStatementContent (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:12686:19)
+      at JSXParserMixin.parseStatementLike (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:12548:17)
+      at JSXParserMixin.parseModuleItem (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:12525:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:13120:36)
+      at JSXParserMixin.parseBlockBody (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:13113:10)
+      at JSXParserMixin.parseProgram (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:12439:10)
+      at JSXParserMixin.parseTopLevel (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:12429:25)
+      at JSXParserMixin.parse (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:14250:10)
+      at parse (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:14292:38)
+      at parser (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\core\lib\transformation\normalize-file.js:64:38)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\core\lib\transformation\index.js:21:50)
+      at run.next (<anonymous>)
+      at transform (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\core\lib\transform.js:22:41)
+      at transform.next (<anonymous>)
+      at step (C:\Users\Taylor\Desktop\demo-1\node_modules\gensync\index.js:261:32)
+      at C:\Users\Taylor\Desktop\demo-1\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Taylor\Desktop\demo-1\node_modules\gensync\index.js:223:11)
+  ModuleBuildError: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+  SyntaxError: C:\Users\Taylor\Desktop\demo-1\index.html: Missing semicolon. (1:86)
+  
+  > 1 | <head><script defer src="./src/main/resources/static/built/bundle.js"></  script></head>Html Webpack Plugin:
+      |                                                                                       ^
+    2 | <pre>
+    3 |   Error: Child compilation failed:
+    4 |   Module build failed (from ./node_modules/babel-loader/lib/index.js):
+      at instantiate (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:64:32)
+      at constructor (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:364:12)
+      at JSXParserMixin.raise (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:3253:19)
+      at JSXParserMixin.semicolon (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:3624:10)
+      at JSXParserMixin.parseExpressionStatement (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:13089:10)
+      at JSXParserMixin.parseStatementContent (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:12686:19)
+      at JSXParserMixin.parseStatementLike (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:12548:17)
+      at JSXParserMixin.parseModuleItem (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:12525:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:13120:36)
+      at JSXParserMixin.parseBlockBody (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:13113:10)
+      at JSXParserMixin.parseProgram (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:12439:10)
+      at JSXParserMixin.parseTopLevel (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:12429:25)
+      at JSXParserMixin.parse (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:14250:10)
+      at parse (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\parser\lib\index.js:14292:38)
+      at parser (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\core\lib\transformation\normalize-file.js:64:38)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\core\lib\transformation\index.js:21:50)
+      at run.next (<anonymous>)
+      at transform (C:\Users\Taylor\Desktop\demo-1\node_modules\@babel\core\lib\transform.js:22:41)
+      at transform.next (<anonymous>)
+      at step (C:\Users\Taylor\Desktop\demo-1\node_modules\gensync\index.js:261:32)
+      at C:\Users\Taylor\Desktop\demo-1\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Taylor\Desktop\demo-1\node_modules\gensync\index.js:223:11)
+      at processResult (C:\Users\Taylor\Desktop\demo-1\node_modules\webpack\lib\NormalModule.js:758:19)
+      at C:\Users\Taylor\Desktop\demo-1\node_modules\webpack\lib\NormalModule.js:860:5
+      at C:\Users\Taylor\Desktop\demo-1\node_modules\loader-runner\lib\LoaderRunner.js:400:11
+      at C:\Users\Taylor\Desktop\demo-1\node_modules\loader-runner\lib\LoaderRunner.js:252:18
+      at context.callback (C:\Users\Taylor\Desktop\demo-1\node_modules\loader-runner\lib\LoaderRunner.js:124:13)
+      at C:\Users\Taylor\Desktop\demo-1\node_modules\babel-loader\lib\index.js:41:103
+  
+  - index.js:64 instantiate
+    [demo-1]/[@babel]/parser/lib/index.js:64:32
+  
+  - index.js:364 constructor
+    [demo-1]/[@babel]/parser/lib/index.js:364:12
+  
+  - index.js:3253 JSXParserMixin.raise
+    [demo-1]/[@babel]/parser/lib/index.js:3253:19
+  
+  - index.js:3624 JSXParserMixin.semicolon
+    [demo-1]/[@babel]/parser/lib/index.js:3624:10
+  
+  - index.js:13089 JSXParserMixin.parseExpressionStatement
+    [demo-1]/[@babel]/parser/lib/index.js:13089:10
+  
+  - index.js:12686 JSXParserMixin.parseStatementContent
+    [demo-1]/[@babel]/parser/lib/index.js:12686:19
+  
+  - index.js:12548 JSXParserMixin.parseStatementLike
+    [demo-1]/[@babel]/parser/lib/index.js:12548:17
+  
+  - index.js:12525 JSXParserMixin.parseModuleItem
+    [demo-1]/[@babel]/parser/lib/index.js:12525:17
+  
+  - index.js:13120 JSXParserMixin.parseBlockOrModuleBlockBody
+    [demo-1]/[@babel]/parser/lib/index.js:13120:36
+  
+  - index.js:13113 JSXParserMixin.parseBlockBody
+    [demo-1]/[@babel]/parser/lib/index.js:13113:10
+  
+  - index.js:12439 JSXParserMixin.parseProgram
+    [demo-1]/[@babel]/parser/lib/index.js:12439:10
+  
+  - index.js:12429 JSXParserMixin.parseTopLevel
+    [demo-1]/[@babel]/parser/lib/index.js:12429:25
+  
+  - index.js:14250 JSXParserMixin.parse
+    [demo-1]/[@babel]/parser/lib/index.js:14250:10
+  
+  - index.js:14292 parse
+    [demo-1]/[@babel]/parser/lib/index.js:14292:38
+  
+  - index.js:41 parser
+    [demo-1]/[@babel]/core/lib/parser/index.js:41:34
+  
+  - parser.next
+  
+  - normalize-file.js:64 normalizeFile
+    [demo-1]/[@babel]/core/lib/transformation/normalize-file.js:64:38
+  
+  - normalizeFile.next
+  
+  - index.js:21 run
+    [demo-1]/[@babel]/core/lib/transformation/index.js:21:50
+  
+  - run.next
+  
+  - transform.js:22 transform
+    [demo-1]/[@babel]/core/lib/transform.js:22:41
+  
+  - transform.next
+  
+  - index.js:261 step
+    [demo-1]/[gensync]/index.js:261:32
+  
+  - index.js:273 
+    [demo-1]/[gensync]/index.js:273:13
+  
+  - index.js:223 async.call.result.err.err
+    [demo-1]/[gensync]/index.js:223:11
+  
+  - ModuleBuildError: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+  
+  - SyntaxError: C:\Users\Taylor\Desktop\demo-1\index.html: Missing semicolon. (1:86)
+  
+  - > 1 | <head><script defer src="./src/main/resources/static/built/bundle.js"><    m/script></head>Html Webpack Plugin:
+  
+  -     |                                                                                       ^
+  
+  -   2 | <pre>
+  
+  -   3 |   Error: Child compilation failed:
+  
+  -   4 |   Module build failed (from ./node_modules/babel-loader/lib/index.js):
+  
+  - index.js:64 instantiate
+    [demo-1]/[@babel]/parser/lib/index.js:64:32
+  
+  - index.js:364 constructor
+    [demo-1]/[@babel]/parser/lib/index.js:364:12
+  
+  - index.js:3253 JSXParserMixin.raise
+    [demo-1]/[@babel]/parser/lib/index.js:3253:19
+  
+  - index.js:3624 JSXParserMixin.semicolon
+    [demo-1]/[@babel]/parser/lib/index.js:3624:10
+  
+  - index.js:13089 JSXParserMixin.parseExpressionStatement
+    [demo-1]/[@babel]/parser/lib/index.js:13089:10
+  
+  - index.js:12686 JSXParserMixin.parseStatementContent
+    [demo-1]/[@babel]/parser/lib/index.js:12686:19
+  
+  - index.js:12548 JSXParserMixin.parseStatementLike
+    [demo-1]/[@babel]/parser/lib/index.js:12548:17
+  
+  - index.js:12525 JSXParserMixin.parseModuleItem
+    [demo-1]/[@babel]/parser/lib/index.js:12525:17
+  
+  - index.js:13120 JSXParserMixin.parseBlockOrModuleBlockBody
+    [demo-1]/[@babel]/parser/lib/index.js:13120:36
+  
+  - index.js:13113 JSXParserMixin.parseBlockBody
+    [demo-1]/[@babel]/parser/lib/index.js:13113:10
+  
+  - index.js:12439 JSXParserMixin.parseProgram
+    [demo-1]/[@babel]/parser/lib/index.js:12439:10
+  
+  - index.js:12429 JSXParserMixin.parseTopLevel
+    [demo-1]/[@babel]/parser/lib/index.js:12429:25
+  
+  - index.js:14250 JSXParserMixin.parse
+    [demo-1]/[@babel]/parser/lib/index.js:14250:10
+  
+  - index.js:14292 parse
+    [demo-1]/[@babel]/parser/lib/index.js:14292:38
+  
+  - index.js:41 parser
+    [demo-1]/[@babel]/core/lib/parser/index.js:41:34
+  
+  - parser.next
+  
+  - normalize-file.js:64 normalizeFile
+    [demo-1]/[@babel]/core/lib/transformation/normalize-file.js:64:38
+  
+  - normalizeFile.next
+  
+  - index.js:21 run
+    [demo-1]/[@babel]/core/lib/transformation/index.js:21:50
+  
+</pre>
